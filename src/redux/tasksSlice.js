@@ -38,8 +38,12 @@ const tasksSlice = createSlice({
         }
       }
     },
+    setStatusFilter: (state, action) => {
+      state.filters.status = action.payload;
+    },
   },
 });
 
-export const { addTask, deleteTask, toggleCompleted } = tasksSlice.actions;
+export const { addTask, deleteTask, toggleCompleted, setStatusFilter } =
+  tasksSlice.actions;
 export const tasksReducer = tasksSlice.reducer;
